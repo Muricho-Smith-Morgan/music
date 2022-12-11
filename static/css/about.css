@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin: 0; */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* *, *:before, *:after {
+    box-sizing: inherit;
+  } */
+  
+  .column {
+    /* float: left; */
+    /* width: 33.3%; */
+    margin: 0% auto;
+    margin-bottom: 16px;
+    /* padding: 0 8px; */
+    /* margin: -200px; */
+  
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    background-color:white;
+    display: inline-block;
+    /* margin: 0% auto; */
+  }
+  #card1 {
+    margin-left: 15%;
+  }
+  #card2 {
+    margin-left: 10%;
+  }
+  .card p{
+    color: black;
+
+  }
+  .card img {
+    width: auto;
+  }
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+    h1{
+      font-size: 20px;
+    }
+    .about-section p{
+      font-size: 20;
+    }
+    .about-section {
+      padding: 3px;
+    }
+    .about-section  p{
+      font-size: 15px;
+    }
+    #card2 {
+      margin-left: 15%;
+    }
+      
+  }
+  .header{
+      background: #fff;
+  }
+  p{
+    font-size: 20px;
+    color: #fff;
+  }
+  h1{
+    text-align: center;
+  }
+  .locate{
+    color: black;
+    text-align: center;
+  }
+  h5{
+    margin-top: 30px;
+  }
+  

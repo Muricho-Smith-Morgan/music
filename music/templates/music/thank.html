@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="thank.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Thank you!</title>
+</head>
+<body>
+    <nav style="background-color:lightskyblue;"> 
+        <h2 class="heading">TEACH MUSIC SCHOOL</h2>
+        <div class="nav-links" id="navLinks">
+            <i id="hide-menu" class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book Now</a></li>
+                <li><a href="About.html">About Us</a></li>
+            </ul>
+        </div>
+        <i id="show-menu" class="fa fa-bars" onclick="ShowMenu()"></i>
+    </nav>
+    <div class="thank">Thank you!</div>
+    <p>You've taken the first step toward changing your career path.</p>
+    <P>We will be in touch with you soon and arrange  your classes</P>
+    <h5>Follow Us On Social Platforms</h5>
+ <!-- Social Media Buttons HTML -->
+<div class="wrapper">
+    <a href="#" class="icon facebook">
+      <div class="tooltip">Facebook</div>
+      <span><i class="fa fa-facebook-f"></i></span>
+    </a>
+    <a href="#" class="icon youtube">
+      <div class="tooltip">Twitter</div>
+      <span><i class="fa fa-youtube"></i></span>
+    </a>
+    <a href="#" class="icon instagram">
+      <div class="tooltip">Instagram</div>
+      <span><i class="fa fa-instagram"></i></span>
+    </a>
+  </div>
+    <footer class="credit">CREATED BY: SMITH MURICHO MORGAN. +254746910796||ALL RIGHTS RESERVED&copy;2022</footer>
+
+    <!-- <p>javascript for toggle menu</p> -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+    function ShowMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+    </script>
+</body>
+</html>
