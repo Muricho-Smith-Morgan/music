@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'book.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TEACH MUSIC SCHOOL</title>
+</head>
+<body>
+    <section class="header">
+        <nav style="background-color:lightskyblue;"> 
+            <h2 class="heading">TEACH MUSIC SCHOOL</h2>
+            <div class="nav-links" id="navLinks">
+                <i id="hide-menu" class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'book' %}" class="active">Book Now</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                </ul>
+            </div>
+            <i id="show-menu" class="fa fa-bars" onclick="ShowMenu()"></i>
+        </nav>
+        
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                <strong>{{message}}</strong>
+            </div>    
+            
+            {% endfor %}
+
+            <div class="container">
+                <h4>Book Now</h4>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text"id="name" name="firstname" placeholder="Your name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="number">Phone Number</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text"id="pnumber" name="phonenumber" placeholder="Your phone number">
+                        </div>
+                    </div>  
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="email">Enter your Email</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email"id="pnumber" name="email" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="course">Your preffered mode</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="Classes" name="Classes">
+                                <option value="Home/Private">Home/Private</option>
+                                <option value="online">Online</option>
+                                <option value="center">Our center</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="learning">learning Instrument</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="learning" name="learning">
+                                <option value="Piano">Piano</option>
+                                <option value="Violin">Violin</option>
+                                <option value="Trumpet">Trumpet</option>
+                                <option value="Flute">Flute</option>
+                                <option value="Guitar">Guitar</option>
+                                <option value="Clarinet">Clarinet</option>
+                                <option value="Drums">Drums</option>
+                                <option value="Harp">Harp</option>
+                                <option value="Cello">Cello</option>
+                                <option value="French horn">French horn</option>
+                                <option value="Brass Instruments">Brass Instruments</option>
+                                <option value="Woodwind Instrument">Woodwind Instrument</option>
+                                <option value="Cymbals">Cymbals</option>
+                                <option value="Trombone">Trombone</option>
+                                <option value="Bassoon">Bassoon</option>
+                                <option value="Tuba">Tuba</option>
+                                <option value="Xylophone">Xylophone</option>
+                                <option value="Bell">Bell</option>
+                                <option value="Bagpipes">Bagpipes</option>
+                                <option value="Viola">Viola</option>
+                                <option value="Accordion">Accordion</option>
+                                <option value="Bass drum">Bass drum</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                        <div class="row">
+                            <input type="submit" value="submit">
+                        </div>
+                </form>
+                
+                </div>
+                <h5>Follow Us On Social Platforms</h5>
+                <!-- Social Media Buttons HTML -->
+                <div class="wrapper">
+                    <a href="https://www.facebook.com/EricOnTheWinningSide/" class="icon facebook">
+                      <div class="tooltip">Facebook</div>
+                      <span><i class="fa fa-facebook-f"></i></span>
+                    </a>
+                    <a href="https://youtube.com/c/ERICONTHEWINNINGSIDE" class="icon youtube">
+                      <div class="tooltip">Youtube</div>
+                      <span><i class="fa fa-youtube"></i></span>
+                    </a>
+                    <a href="https://instagram.com/eric_on_the_winning_side?utm_medium=copy_link" class="icon instagram">
+                      <div class="tooltip">Instagram</div>
+                      <span><i class="fa fa-instagram"></i></span>
+                    </a>
+                </div>
+                  <footer class="credit">CREATED BY: <a href="tel:+254746910796">SMITH MURICHO MORGAN</a> | ALL RIGHTS RESERVED&copy;2022</footer>
+       <!-- <p>javascript for toggle menu</p> -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+    function ShowMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+    </script>            
+
+</body>
+</html>
