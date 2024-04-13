@@ -1,0 +1,7 @@
+*venv
+*env
+
+
+# binary files
+*__pycache__
+
